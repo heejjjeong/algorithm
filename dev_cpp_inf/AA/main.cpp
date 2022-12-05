@@ -1,51 +1,43 @@
 #include <stdio.h> 
-#include <string>
 #include <iostream>
+#include <string>
+#include <math.h>
 using namespace std;
-
-//나는 문자열이용해서 풀었는데 선생님은 내가 맨처음에 나누기,모드 연산 했던 걸로 해결함
-//방식은 좀 다르지만 그래도,,, 비슷은 했다
-
-int digit_sum(int x) //자연수의 자릿수 합을 구하는 함수 
-{
-	int temp, sum = 0;
-	
-	// 125가 들어왔다고 했을 때.. 3자리 수 인것을 알아낼수있는 방법.. 
-	// string 으로 받아서 길이 계산?	
-	string xstr = to_string(x);
-	const int xLength =  xstr.length();
-	
-	for(int i = 0; i < xLength; ++i)
-	{
-		sum += xstr[i] - '0';
-	}
-	return sum;
-}
 
 int main() {
 	//freopen("input.txt", "rt", stdin);
-	int n, num, sum, max = -2147000000, result = 0;
-	scanf("%d", &n);
+	string strNum = "";
+	int n, result = 0, maxNum = 0;
+	cin >> strNum;
+
+   const int strLen = strNum.length();
+
+	int numCount[strLen] = {0};
 	
-	for(int i = 0; i < n; ++i)
+	for(int i = 0; i < strLen; ++i)
 	{
-		scanf("%d", &num);
-		sum = digit_sum(num);
-		
-		if(max < sum)
+		int temp = strNum[i] - '0';
+		numCount[temp] += 1;
+	}
+	
+	for(int i = 1; i < strLen; ++i)
+	{
+		if(numCount[i] > maxNum) // numCount[i] : 숫자 순서의 개수
 		{
-			max = sum;
-			result = num;
+			//i번째 숫자의 수가 최대값보다 클때
+			maxNum = numCount[i]; //번째 숫자 값을 최대에 넣고
+			result = i;	// 해당 순서를 결과값에 넣어줌
 		}
-		else if(max == sum)
+		if(numCount[i] == maxNum) //번째 숫자의 수와 값이 같을때
 		{
-			if(result < num)
+			if(i > result) // 해당 순서와 결과값을 비교해서 큰 수를 넣음
 			{
-				result = num;
+				result = i;
 			}
 		}
 	}
 	
-	printf("%d\n", result);
+	printf("%d", result);
 	return 0;
 }
+

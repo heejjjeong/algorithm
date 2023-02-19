@@ -18,9 +18,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="18.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="17.cpp">
       <Filter>소스 파일\Solved</Filter>
     </ClCompile>
@@ -71,6 +68,12 @@
     </ClCompile>
     <ClCompile Include="14.cpp">
       <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="18.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="19.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

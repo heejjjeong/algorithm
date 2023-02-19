@@ -1,26 +1,27 @@
 #include <stdio.h> 
 #include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 int main() {
 	freopen("input.txt", "rt", stdin);
-	int n, result = 0;
 	
-	scanf("%d", n);
-
-	int array[n] = {0,};
-	int temp = 0;
+	int n = 0, temp = 0;
+	vector<int> vecCard;
+	cin>>n;
 	
-	for(int i = 0; i < n; ++i)
+	for(int i = 0; i < n * 2; ++i)
 	{
-		scanf("%d", temp);
-		array[i] = temp;
+		cin >> temp;
+		if(1 == temp % i)
+		{
+			vecCard.push_back(temp);
+			
+		}
 	}
-
 	
-	
-	printf("%d", result);
+	cout << vecCard.size() <<endl;
 	return 0;
 }
-
-

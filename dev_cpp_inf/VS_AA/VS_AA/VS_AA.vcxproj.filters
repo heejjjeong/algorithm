@@ -73,6 +73,15 @@
       <Filter>소스 파일\Solved</Filter>
     </ClCompile>
     <ClCompile Include="19.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="20.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="21.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="22.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

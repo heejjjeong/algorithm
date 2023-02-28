@@ -7,18 +7,18 @@
 
 using namespace std;
 
+//이중 for문 사용 금지
 int main()
 {
-	//FILE* stream;
-	//errno_t err;
-	//
-	//freopen_s(&stream, "input.txt", "r", stdin);
+	/*FILE* stream;
+	errno_t err;
 
-	int N = 0, K = 0, i = 0, j = 0,temp = 0, sum = 0;
+	freopen_s(&stream, "input.txt", "r", stdin);*/
+
+	int N = 0, K = 0, i = 0, j = 0, temp = 0, sum = 0, max = -23700000;
 	cin >> N >> K;
-	
+
 	vector<int> vec;
-	vector<int> res;
 
 	for (i = 0; i < N; ++i)
 	{
@@ -26,17 +26,25 @@ int main()
 		vec.push_back(temp);
 	}
 
-	for (i = 0; i < N - 1; ++i)
+	//맨처음연속날짜누적
+	for (i = 0; i < K; ++i)
 	{
-		for (j = 0; j < K; ++j)
+		sum += vec[i];
+	}
+	
+	max = sum;
+
+	for (i = 0; i < N - K ; ++i)
+	{
+		sum = sum - vec[i] + vec[i + K];
+
+		if (max < sum)
 		{
-			sum += vec[i + j];
+			max = sum;
 		}
-		res.push_back(sum);
-		sum = 0;
 	}
 
-	int resMax = *max_element(res.begin(), res.end());
-	cout << resMax << endl;
+	cout << max;
+
 	return 0;
 }

@@ -8,32 +8,30 @@ using namespace std;
 
 int main()
 {
-	FILE* stream;
-	errno_t err;
+	//FILE* stream;
+	//errno_t err;
 
-	freopen_s(&stream, "input.txt", "r", stdin);
+	//freopen_s(&stream, "input.txt", "r", stdin);
 
-	int N = 0, temp = 0, i = 0;
-	vector<int> res;
-	cin >> N;
+	int N, i = 0, temp = 0;
 	vector<int> vec;
+	vector<int> res;
+
+	cin >> N;
 	for (i = 0; i < N; ++i)
 	{
 		cin >> temp;
 		vec.push_back(temp);
-		res.push_back(1);
+		res.push_back(i + 1);
 	}
-
+	
 	for (i = 0; i < N; ++i)
 	{
-		for (int j = 0; j < N; ++j)
+		for (int j = 0; j < i; ++j)
 		{
-			if (i != j)
+			if (vec[j] < vec[i])
 			{
-				if (vec[i] < vec[j])
-				{
-					++res[i];
-				}
+				--res[i];
 			}
 		}
 	}
@@ -42,6 +40,5 @@ int main()
 	{
 		cout << res[i] << endl;
 	}
-
 	return 0;
 }

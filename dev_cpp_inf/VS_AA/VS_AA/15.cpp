@@ -1,13 +1,32 @@
 #include <stdio.h> 
 #include <iostream>
 #include <string>
-#include <vector>
 #include <algorithm>
 using namespace std;
 
 int main() {
 	//freopen("input.txt", "rt", stdin);
-	int n;
+	int n = 0, i, j, flag, cnt = 0;
+	scanf("%d", n);
+	for (i = 2; i <= n; ++i)
+	{
+		flag = 1;
+		for (j = 2; j*j <= i; ++j)
+		{
+			if (0 == i % j)
+			{
+				flag = 0;
+				break;
+			}
+		}
+		if (flag)
+		{
+			++cnt;
+		}
+	}
+	cout << cnt << endl;
+
+	/*int n;
 	cin >> n;
 	
 	vector<bool> vec;
@@ -32,7 +51,7 @@ int main() {
 			++temp;
 		}
 	}
-	cout << temp <<endl;
+	cout << temp <<endl;*/
 	return 0;
 }
 

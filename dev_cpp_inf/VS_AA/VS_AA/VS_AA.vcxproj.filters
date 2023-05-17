@@ -103,9 +103,18 @@
       <Filter>소스 파일\Solved</Filter>
     </ClCompile>
     <ClCompile Include="30.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Solved</Filter>
     </ClCompile>
     <ClCompile Include="29.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="31.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="32.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="33.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

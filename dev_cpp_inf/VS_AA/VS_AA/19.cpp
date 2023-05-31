@@ -5,46 +5,36 @@
 #include <algorithm>
 
 using namespace std;
+//#define TEST
 
-//분노 유발자 김청
 int main()
 {
-	//FILE* stream;
-	//errno_t err;
-	//
-	//freopen_s(&stream, "input.txt", "r", stdin);
+#ifdef TEST
+	FILE* stream;
+	errno_t err;
 
-	int n = 0, sum = 0, max = -1;
+	freopen_s(&stream, "input.txt", "r", stdin);
+#endif
+
+	int n, temp, cnt = 0, max;
+	vector<int> student;
 	cin >> n;
-
-	vector<int> Height;
-	Height.reserve(n);
-
 	for (int i = 0; i < n; ++i)
 	{
-		int temp = 0;
 		cin >> temp;
-
-		Height.push_back(temp);
+		student.push_back(temp);
 	}
-	int i,j;
-	for (i = n - 1; i > -1 ; --i)
+	max = student.back();
+	for (int i = n - 1; i >= 1 ; --i)
 	{
-		for (j = i - 1; j > -1; --j)
+		if (max < student[i])
 		{
-			if (Height[j] > Height[i])
-			{
-				sum++;
-				i = j + 1;
-				break;
-			}
-			if (j == 0)
-			{
-				i = j;
-			}
+			cnt++;
+			max = student[i];
 		}
 	}
-	cout << sum << endl;
+
+	cout << cnt << endl;
 
 	return 0;
 }

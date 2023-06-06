@@ -6,7 +6,7 @@
 
 using namespace std;
 
-//#define TEST
+#define TEST
 
 int main()
 {
@@ -21,7 +21,45 @@ int main()
 	2point로 풀기..
 	*/
 
-	vector<int> first, second, res;
+	int n, m, i, p1 = 0, p2 = 0, p3 = 0;
+	cin >> n;
+	vector<int> a(n);
+	for (i = 0; i < n; ++i)
+	{
+		int temp;
+		cin >> temp;
+		a[i] = temp;
+	}
+	cin >> m;
+	vector<int> b(m), c(n + m);
+	for (i = 0; i < m; ++i)
+	{
+		int temp;
+		cin >> temp;
+		b[i] = temp;
+	}
+	
+	sort(a.begin(), a.end());
+	sort(b.begin(), b.end());
+
+	while (p1 < n && p2 < m)
+	{
+		if (a[p1] == b[p2])
+		{
+			c[p3++] = a[p1++];
+			p2++; //교집합일때 동시 증가
+		}
+		else if (a[p1] < b[p2])
+			p1++;
+		else
+			p2++;
+	}
+
+	for (i = 0; i < p3; ++i)
+	{
+		cout << c[i] << " ";
+	}
+	/*vector<int> first, second, res;
 	int N, M, pos1 = 0, pos2 = 0, temp;
 
 	cin >> N;
@@ -30,7 +68,7 @@ int main()
 		cin >> temp;
 		first.push_back(temp);
 	}
-	
+
 	cin >> M;
 	for (int i = 0; i < M; ++i)
 	{
@@ -63,6 +101,6 @@ int main()
 	for (int i = 0; i < res.size(); ++i)
 	{
 		cout << res[i] << " ";
-	}
+	}*/
 	return 0;
 }

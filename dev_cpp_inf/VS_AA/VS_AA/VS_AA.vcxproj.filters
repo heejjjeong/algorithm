@@ -142,6 +142,9 @@
       <Filter>소스 파일\Solved</Filter>
     </ClCompile>
     <ClCompile Include="42.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="43.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

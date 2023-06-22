@@ -8,6 +8,7 @@ using namespace std;
 
 //#define TEST
 
+/*
 int Count(int Dis, const int N, const vector<int>& Vec)
 {
 	int pos = 0, next = 1, cnt = 1;
@@ -26,6 +27,7 @@ int Count(int Dis, const int N, const vector<int>& Vec)
 	
 	return cnt;
 }
+*/
 int main()
 {
 #ifdef TEST
@@ -35,14 +37,6 @@ int main()
 	freopen_s(&stream, "input.txt", "r", stdin);
 #endif
 	/*
-	이분검색 결정알고리즘
-	결정 알고리즘 : 답을 정해두고 답이 맞는지 아닌지 좁혀 나아가는 알고리즘
-	좁혀 나아가는 과정에서 이분 검색을 사용한다.
-
-	<풀이과정>
-	
-	*/
-	
 	int n, c, temp, lt, rt, mid, max = -1, cnt = 0;
 	vector<int> vec;
 	cin >> n >> c;
@@ -74,6 +68,9 @@ int main()
 		}
 	}
 	cout << max;
+	*/
+
+
 
 	return 0;
 }

@@ -148,12 +148,15 @@
       <Filter>소스 파일\Solved</Filter>
     </ClCompile>
     <ClCompile Include="44.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Solved</Filter>
     </ClCompile>
     <ClCompile Include="45.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Solved</Filter>
     </ClCompile>
     <ClCompile Include="46.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="47.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

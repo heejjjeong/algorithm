@@ -15,6 +15,43 @@ int main()
 
 	freopen_s(&stream, "input.txt", "r", stdin);
 #endif
+	int n, temp, sum = 0;
+	cin >> n;
+	vector<vector<int>> vec(11, vector<int>(11, 0)); //결과 받는 용도
+	vector<int> data(11); //정면 , 측면 데이터 
+	for (int i = 1; i <= n; ++i)
+	{
+		cin >> temp;
+		data[i] = temp;
+	}
+
+	for (int i = 1; i <= n; ++i)
+	{
+		for (int j = 1; j <= n; ++j)
+		{
+			vec[j][i] = data[i];
+		}
+	}
+
+	for (int i = n; i >= 1; --i)
+	{
+		cin >> temp;
+		data[i] = temp;
+	}
+
+	for (int i= 1; i <= n; ++i)
+	{
+		for (int j = 1; j <= n; ++j)
+		{
+			if (vec[i][j] > data[i])
+			{
+				vec[i][j] = data[i];
+			}
+			sum += vec[i][j];
+		}
+	}
+	//cout << sum;
+	
 	int n, temp, total = 0;
 	cin >> n;
 	vector<vector<int>> vec(2, vector<int>(n, 0)); //input 받는 용도

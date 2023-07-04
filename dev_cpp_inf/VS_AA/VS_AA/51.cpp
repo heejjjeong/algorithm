@@ -18,63 +18,29 @@ int main()
 #endif
 	int temp, h, w, myh, myw, mywtemp, max = 0, cnt = 0;
 	cin >> h >> w;
-	vector<vector<int>> dy(h, vector<int>(w, 0));
-	for (int i = 0; i < h; ++i)
+	vector<vector<int>> dy(h + 1, vector<int>(w + 1, 0));
+	for (int i = 1; i <= h; ++i)
 	{
-		for (int j = 0; j < w; ++j)
+		for (int j = 1; j <= w; ++j)
 		{
 			cin >> temp;
 
-			if (i == 0 && j == 0)
-			{
-				dy[i][j] = temp;
-			}
-			else if (i == 0 && j != 0)
-			{
-				dy[i][j] = dy[i][j - 1] + temp;
-			}
-			else if (i != 0 && j == 0)
-			{
-				dy[i][j] = dy[i - 1][j] + temp;
-			}
-			else if (i != 0 && j != 0)
-			{
-				dy[i][j] = dy[i - 1][j] + dy[i][j - 1] - dy[i - 1][j - 1] + temp;
-			}
+			dy[i][j] = dy[i - 1][j] + dy[i][j - 1] - dy[i - 1][j - 1] + temp;
+
 		}
 	}
 
 	cin >> myh >> myw;
 	////////////////////
 
-	for (int i = myh - 1; i < h; ++i)
+	for (int i = myh; i <= h; ++i)
 	{
-		for (int j = myw - 1; j < w; ++j)
-		{
-			if (i == myh - 1 && j == myw - 1)
+		for (int j = myw; j <= w; ++j)
+		{	
+			temp = dy[i][j] - dy[i - myh][j] - dy[i][j - myw] + dy[i - myh][j - myw];
+			if (max < temp)
 			{
-				max = dy[i][j];
-			}
-			else if (i == myh - 1 && j != myw - 1)
-			{
-				if (max < dy[i][j] - dy[i][j - myw])
-				{
-					max = dy[i][j] - dy[i][j - myw];
-				}
-			}
-			else if (i != myh - 1 && j == myw - 1)
-			{
-				if (max < dy[i][j] - dy[i - myh][j])
-				{
-					max = dy[i][j] - dy[i - myh][j];
-				}
-			}
-			else if (i != myh - 1 && j != myw - 1)
-			{
-				if (max < dy[i][j] - dy[i - myh][j] - dy[i][j - myw] + dy[i - myh][j - myw])
-				{
-					max = dy[i][j] - dy[i - myh][j] - dy[i][j - myw] + dy[i - myh][j - myw];
-				}
+				max = temp;
 			}
 		}
 	}

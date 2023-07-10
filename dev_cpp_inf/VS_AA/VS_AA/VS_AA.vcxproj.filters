@@ -16,6 +16,9 @@
     <Filter Include="소스 파일\Solved">
       <UniqueIdentifier>{5c3598f8-bc7c-4c7b-becb-b9fe10a1e12d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\baekjoon">
+      <UniqueIdentifier>{0d6b15b0-03f2-4e12-bd00-8eba0866fb47}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="15.cpp">
@@ -168,11 +171,17 @@
     <ClCompile Include="50.cpp">
       <Filter>소스 파일\Solved</Filter>
     </ClCompile>
+    <ClCompile Include="52.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
     <ClCompile Include="51.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="53.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="52.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="baekjoon_2775.cpp">
+      <Filter>소스 파일\baekjoon</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

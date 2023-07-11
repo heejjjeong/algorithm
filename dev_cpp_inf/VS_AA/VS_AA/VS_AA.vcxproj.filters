@@ -177,11 +177,14 @@
     <ClCompile Include="51.cpp">
       <Filter>소스 파일\Solved</Filter>
     </ClCompile>
-    <ClCompile Include="53.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="baekjoon_2775.cpp">
       <Filter>소스 파일\baekjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="53.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="54.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

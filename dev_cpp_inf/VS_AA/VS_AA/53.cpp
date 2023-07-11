@@ -55,8 +55,7 @@ int main()
 		div /= k;
 	}
 
-	int size = stk.size();
-	for (int i = 0; i < size; ++i)
+	while (!stk.empty())
 	{
 		cout << str[stk.top()];
 		stk.pop();

@@ -183,7 +183,13 @@
     <ClCompile Include="53.cpp">
       <Filter>소스 파일\Solved</Filter>
     </ClCompile>
+    <ClCompile Include="55.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
     <ClCompile Include="54.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="56.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

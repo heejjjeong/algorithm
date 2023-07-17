@@ -10,8 +10,8 @@ void recursive(int x)
 		return;
 	else
 	{
-		cout << x << " ";
 		recursive(x - 1);
+		cout << x << " ";
 	}
 }
 #define TEST

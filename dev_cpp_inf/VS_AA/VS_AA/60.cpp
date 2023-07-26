@@ -1,33 +1,35 @@
 #include <stdio.h>
 #include <iostream>
 #include <vector>
-//#include <map>
-//#include <utility>
-#include <algorithm>
 
 using namespace std;
-int n = 0, numSum = 0;
+int n = 0, total = 0;
+bool isSame = false;
 
-void recursive(int t, /*multimap<int, pair<int,int>>& _m,*/ vector<int>& c, vector<int>& v, vector<int>& s)
+void recursive(int t, vector<int>& c, vector<int>& v)
 {
+	if (isSame)
+		return;
+
 	if (t > n - 1)
 	{
+		int checkTotal = 0;
 		for (int i = 0; i < t; ++i)
 		{
 			if (c[i] == 1)
-				numSum += v[i];
+				checkTotal += v[i];
 		}
-		s.push_back(numSum);
-		numSum = 0;
+		if ((total - checkTotal) == checkTotal)
+			isSame = true;
 		return;
 	}
 	c[t] = 1;
-	recursive(t + 1, c,v,s);
+	recursive(t + 1, c,v);
 	c[t] = 0;
-	recursive(t + 1, c,v,s);
+	recursive(t + 1, c,v);
 }
 
-#define TEST
+//#define TEST
 int main()
 {
 #ifdef TEST
@@ -41,39 +43,20 @@ int main()
 
 	vector<int> vec(n + 1);
 	vector<int> check(n + 1);
-	vector<int> sum;
-	//multimap<int, pair<int, int>> m;
 
 	for (int i = 0; i < n; ++i)
 	{
 		cin >> temp;
 		vec[i] = temp;
+		total += vec[i];
 	}
 
-	/*
-	for (int i = 0; i < n; ++i)
-	{
-		for (int j = 0; j < pow(2, i); ++j)
-		{
-			m.emplace(vec[i], pair<int, int>(vec[i + 1], vec[i + 1]));
-		}
-	}
-	*/
-	recursive(0,/* m,*/ check, vec, sum);
+	recursive(0, check, vec);
 	
-	sort(sum.begin(), sum.end());
-	temp = -1;
-	for (int i = 0; i < sum.size(); ++i) 
-	{
-		if (temp == sum[i])
-		{
-			cout << "YES";
-			return 0;
-		}
-		else
-			temp = sum[i];
-	}
+	if (isSame)
+		cout << "YES";
+	else
+		cout << "NO";
 
-	cout << "NO";
 	return 0;
 }

@@ -36,6 +36,18 @@
     <Filter Include="소스 파일\_Question\OfficePrinter">
       <UniqueIdentifier>{c7efa184-3688-48cd-8d2e-297bb2b2fcc4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Tree">
+      <UniqueIdentifier>{87d152a2-b5a5-4950-a973-f75f4f3d52d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Tree\Order">
+      <UniqueIdentifier>{926d0165-b787-46fc-ba3c-7d1d46d3981d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Tree\BST">
+      <UniqueIdentifier>{aa2b4ad3-b4af-4dc8-9842-08448f5d9a10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\_Question\FileSystemStructure">
+      <UniqueIdentifier>{13339708-9dd6-4dec-99a5-5a0b4aa82241}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DynamicArray.cpp">
@@ -61,6 +73,18 @@
     </ClCompile>
     <ClCompile Include="officePrinter.cpp">
       <Filter>소스 파일\_Question\OfficePrinter</Filter>
+    </ClCompile>
+    <ClCompile Include="orgTree.cpp">
+      <Filter>소스 파일\Tree\Order</Filter>
+    </ClCompile>
+    <ClCompile Include="levelOrder.cpp">
+      <Filter>소스 파일\Tree\Order</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySearchTree.cpp">
+      <Filter>소스 파일\Tree\BST</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystemStructure.cpp">
+      <Filter>소스 파일\_Question\FileSystemStructure</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

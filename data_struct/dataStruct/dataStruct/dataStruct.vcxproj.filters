@@ -48,6 +48,12 @@
     <Filter Include="소스 파일\_Question\FileSystemStructure">
       <UniqueIdentifier>{13339708-9dd6-4dec-99a5-5a0b4aa82241}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Median">
+      <UniqueIdentifier>{fdab1526-3091-4931-b828-9a746c6246c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\_Question\DataListMerge">
+      <UniqueIdentifier>{65a9081e-2002-402c-bbde-4dc93e46f465}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DynamicArray.cpp">
@@ -85,6 +91,12 @@
     </ClCompile>
     <ClCompile Include="FileSystemStructure.cpp">
       <Filter>소스 파일\_Question\FileSystemStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="Median.cpp">
+      <Filter>소스 파일\Median</Filter>
+    </ClCompile>
+    <ClCompile Include="DataListMerge.cpp">
+      <Filter>소스 파일\_Question\DataListMerge</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

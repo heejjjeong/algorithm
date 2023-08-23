@@ -216,6 +216,9 @@
     <ClCompile Include="beakjoon_1655.cpp">
       <Filter>소스 파일\baekjoon</Filter>
     </ClCompile>
+    <ClCompile Include="64.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">

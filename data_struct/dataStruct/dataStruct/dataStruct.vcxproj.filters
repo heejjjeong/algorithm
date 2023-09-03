@@ -60,6 +60,15 @@
     <Filter Include="소스 파일\HashTable\HashMap">
       <UniqueIdentifier>{83859eca-6d1f-41e2-b2c1-a215db807dba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\_Question\URLMapping">
+      <UniqueIdentifier>{2dbe152b-492f-4b8d-ac29-15e50943cb3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\HashTable\BloomFilter">
+      <UniqueIdentifier>{2b9de6b0-84d1-47fb-9525-d46c79a6987e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\_Question\EmailCheck">
+      <UniqueIdentifier>{2d913342-202a-4aeb-a54e-9cfebb0f0276}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DynamicArray.cpp">
@@ -111,7 +120,19 @@
       <Filter>소스 파일\HashTable\HashMap</Filter>
     </ClCompile>
     <ClCompile Include="CuckooHashing.cpp">
-      <Filter>소스 파일\HashTable</Filter>
+      <Filter>소스 파일\HashTable\HashMap</Filter>
+    </ClCompile>
+    <ClCompile Include="URLMapping.cpp">
+      <Filter>소스 파일\_Question\URLMapping</Filter>
+    </ClCompile>
+    <ClCompile Include="STLHashTable.cpp">
+      <Filter>소스 파일\HashTable\HashMap</Filter>
+    </ClCompile>
+    <ClCompile Include="BloomFilter.cpp">
+      <Filter>소스 파일\HashTable\BloomFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="EmailCheck.cpp">
+      <Filter>소스 파일\_Question\EmailCheck</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

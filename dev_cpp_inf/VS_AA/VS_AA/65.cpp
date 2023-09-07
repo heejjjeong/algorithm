@@ -5,10 +5,36 @@ using namespace std;
 
 vector<vector<int>> vec(9, vector<int>(9, 1));
 vector<vector<bool>> check(9, vector<bool>(9, false));
+vector<int> dx = { 1, 0, -1 , 0 };
+vector<int> dy = { 0, 1, 0 , -1 };
+
 int result = 0;
+
 void dfs(int posX, int posY)
 {
-	if (check[posX][posY] == true || vec[posX][posY] == 1)
+	int xx, yy; //나아 갈 좌표 
+
+	if (posX == 7 && posY == 7)
+	{
+		++result;
+	}
+	else
+	{
+		for (int i = 0; i < dx.size(); ++i)
+		{
+			xx = posX + dx[i];
+			yy = posY + dy[i];
+			if (xx < 1 || xx > 7 || yy < 1 || yy > 7)
+				continue;
+			if (vec[xx][yy] == 0 && check[xx][yy] == 0)
+			{
+				check[xx][yy] = 1;
+				dfs(xx, yy);
+				check[xx][yy] = 0;
+			}
+		}
+	}
+	/*if (check[posX][posY] == true || vec[posX][posY] == 1)
 		return;
 	check[posX][posY] = true;
 
@@ -31,7 +57,7 @@ void dfs(int posX, int posY)
 	dfs(posX, posY - 1);
 
 	cout << posX << ", " << posY << " 다시 open " << endl;
-	check[posX][posY] = false;
+	check[posX][posY] = false;*/
 }
 
 #define TEST
@@ -52,7 +78,9 @@ int main()
 		}
 	}
 
+	check[1][1] = 1;
 	dfs(1,1);
+
 	cout << result << endl;
 	return 0;
 }

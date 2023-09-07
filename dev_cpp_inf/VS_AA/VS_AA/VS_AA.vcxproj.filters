@@ -201,25 +201,28 @@
     <ClCompile Include="59.cpp">
       <Filter>소스 파일\Solved</Filter>
     </ClCompile>
-    <ClCompile Include="60.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="61.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="62.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="63.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="beakjoon_1655.cpp">
       <Filter>소스 파일\baekjoon</Filter>
     </ClCompile>
-    <ClCompile Include="64.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="60.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="61.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="62.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="63.cpp">
+      <Filter>소스 파일\Solved</Filter>
     </ClCompile>
     <ClCompile Include="65.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="64.cpp">
+      <Filter>소스 파일\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="66.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

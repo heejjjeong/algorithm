@@ -68,9 +68,9 @@ int main()
 
 	vector<Student> Students;
 
-	Students.push_back(Student(pair<int, int>(1,2), true));
+	Students.push_back(Student(pair<int, int>(3,2), true));
 	Students.push_back(Student(pair<int, int>(2,2), true));
-	Students.push_back(Student(pair<int, int>(3,2), false));
+	Students.push_back(Student(pair<int, int>(1,2), false));
 	Students.push_back(Student(pair<int, int>(4,2), false));
 	Students.push_back(Student(pair<int, int>(5,2), false));
 

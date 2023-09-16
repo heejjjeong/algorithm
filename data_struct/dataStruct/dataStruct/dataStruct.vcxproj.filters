@@ -75,6 +75,9 @@
     <Filter Include="소스 파일\_Question\SearchStudent">
       <UniqueIdentifier>{3b4fe9a9-5153-4415-81ae-807a6acc265d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Sort">
+      <UniqueIdentifier>{97a12516-9ed6-4770-aad3-d3cb12e470b2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DynamicArray.cpp">
@@ -145,6 +148,15 @@
     </ClCompile>
     <ClCompile Include="SearchStudent.cpp">
       <Filter>소스 파일\_Question\SearchStudent</Filter>
+    </ClCompile>
+    <ClCompile Include="MergeSort.cpp">
+      <Filter>소스 파일\Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="QuickSort.cpp">
+      <Filter>소스 파일\Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="PartialSorting.cpp">
+      <Filter>소스 파일\_Question</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
